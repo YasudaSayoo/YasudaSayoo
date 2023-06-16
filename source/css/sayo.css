@@ -1,0 +1,305 @@
+.aplayer .aplayer-lrc p {
+  color: #ff1f2f !important;
+}
+
+@counter-style circled-decimal {
+  system: fixed;
+  symbols: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩;
+  suffix: " ";
+}
+
+@counter-style quote-decimal {
+  system: fixed;
+  symbols: "1" "2" "3" "4" "5" "6" "7" "8" "9" "10";
+  prefix: "(";
+  suffix: ") ";
+}
+
+/* 共通仕様 */
+.note {
+  font-weight: bold;
+}
+.note + ul {
+  padding-left: 0;
+}
+/* 答　顕示／隠す */
+.ans {
+  color: transparent;
+  font-size: larger;
+  background-color: lightgrey;
+}
+.ans:hover {
+  color: red;
+  background-color: transparent;
+}
+/* タイトル加粗 */
+.kihon,
+.jissen {
+  font-weight: bolder;
+}
+
+#言葉 + ul {
+  border: 1px solid #000;
+  border-bottom: none;
+  list-style: decimal inside;
+  padding-left: 10px;
+}
+
+/* 言葉と例文ー２言葉 */
+.kotoba-header + ul {
+  margin-left: -10px;
+  padding-left: 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  /* padding-left: -0.5rem; */
+}
+.kotoba-header + ul > li {
+  list-style: circled-decimal inside;
+  margin-left: 10px;
+  /* display: flex; */
+}
+.kotoba-header + ul > li::marker {
+  font-size: 1rem;
+}
+.kotoba-header + ul > li > ul > li {
+  list-style: none;
+}
+
+/* 基本練習ー１用法
+   youhou01: 注意词语在使用时的一些限制
+   youhou02: 注意用法
+   youhou01: 注意出错的地方
+*/
+
+.rengo + ul > li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+.rengo + ul > li:nth-child(4n+1) {
+  counter-increment: count-rengo;
+  position: relative;
+}
+.rengo + ul > li:nth-child(4n+1)::before {
+  content: "("counter(count-rengo)")";
+  position: absolute;
+  left: -1.7rem;
+}
+.rengo + ul > li > .rg-after {
+  min-width: 100px;
+  position: relative;
+  margin-right: 80px;
+  display: flex;
+  align-items: center;
+}
+.rengo + ul > li > .rg-after::after {
+  content: "・";
+  position: absolute;
+  right: 0;
+}
+
+.rengo + ul > li > .rg-before {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.rengo + ul > li > .rg-before::before {
+  content: "・";
+  position: absolute;
+  left: -20px;
+}
+
+.youhou01 + ul,
+.imi + ul {
+  margin-left: 2rem;
+  list-style: quote-decimal outside;
+}
+/* 選択仕様 */
+.option-border {
+  min-width: 38%;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 1rem;
+  border: 1px solid #000;
+}
+/* 問題仕様 */
+.option-border + ul {
+  padding-left: 0;
+  list-style: circled-decimal inside;
+}
+
+/* 用法仕様 */
+.youhou02 {
+  font-size: 1rem;
+}
+.youhou02 + ul > li:nth-child(n + 2) {
+  counter-increment: youhou;
+}
+.youhou02 + ul > li:first-child:before {
+  content: "(例)";
+  border: none;
+  width: 30px;
+}
+.youhou02 + ul > li:nth-child(n + 2)::before {
+  content: "(" counter(youhou) ")";
+  border: none;
+  width: 30px;
+}
+
+.youhou02 + ul > li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.youhou02 + ul > li > span {
+  flex: 1 1 auto;
+  min-width: 50px;
+  max-width: 220px;
+  margin-left: auto;
+  display: flex;
+}
+.youhou02 + ul > li > span > strong {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+/* 用法の答　仕様 */
+.youhou02-ans,
+.youhou03-ans > strong {
+  color: transparent;
+  background-color: lightgrey;
+}
+.youhou02-ans:hover,
+.youhou03-ans:hover > strong {
+  /* color: red; */
+  color: #f00;
+  background-color: transparent;
+}
+
+/* --------------- */
+
+/* 実践練習 */
+/* 実践練習ータイトル文字大小 */
+.jissen {
+  font-size: 1rem;
+}
+
+.jissen + ul {
+  list-style: none;
+  padding-left: 0;
+}
+.jissen + ul > li:before {
+  border: 1px solid #000;
+  margin-right: 6px;
+  display: inline-block;
+  width: 26px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.jissen + ul > li {
+  counter-increment: question;
+}
+.jissen + ul > li:before {
+  content: counter(question);
+}
+.jissen + ul > li > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.jissen + ul > li > ul > li {
+  list-style: none;
+  counter-increment: answer;
+}
+.jissen + ul > li > ul > li:before {
+  content: counter(answer) "　";
+}
+.jissen + ul > li > ul > li + li {
+  margin-top: 0;
+}
+
+/* 実践練習−３ 選択改行 */
+.jissen-wrap + ul > li > ul {
+  display: block;
+}
+
+/* ------------ */
+
+.sy-border {
+  padding: 0.5rem;
+  border: 0.1rem solid #000;
+}
+.sy-border > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-flow: row wrap; */
+}
+.sy-border > ul > li {
+  padding: 0;
+  margin: 0;
+  /* flex: 1; */
+  text-align: center;
+}
+
+/* 02言葉 */
+.kotoba > .kotoba-border {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 0.1rem solid #000;
+  border-bottom: none;
+}
+.kotoba > .kotoba-border:last-child {
+  border-bottom: 0.1rem solid #000;
+}
+
+.kotoba-border > .left {
+  width: 8rem;
+  border-right: 0.1rem dashed #000;
+  display: flex;
+}
+
+.kotoba-border > .left > ul {
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.kotoba-border > .right {
+  flex: 1;
+}
+
+.kotoba-border > .right > ul {
+  margin: 0;
+  padding: 1rem 1rem 1rem 2rem;
+  list-style: decimal;
+}
+
+/* imi */
+
+.imi > ol {
+  padding: 0 0 0 1rem;
+  margin: 0;
+  list-style: decimal outside;
+}
+
+.imi-border {
+  padding: 0.5rem;
+  border: 0.1rem solid #000;
+}
+
+.imi-border > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
