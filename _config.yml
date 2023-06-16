@@ -1,3 +1,18 @@
+
+# aplayer
+# aplayer:
+  # script_dir: some/place                        # Public 目录下脚本目录路径，默认: 'assets/js'
+  # style_dir: some/place                         # Public 目录下样式目录路径，默认: 'assets/css'
+  # 引用 APlayer.js 外部 CDN 地址 (默认不开启)
+  # cdn: https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js               
+  # 引用 APlayer.css 外部 CDN 地址 (默认不开启)
+  # style_cdn: https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css
+  # meting: true                                  # MetingJS 支持
+  # 自定义 Meting API 地址
+  # meting_api: https://api.injahow.cn/meting/
+  # meting_cdn: http://xxx/Meing.min.js           # 引用 Meting.js 外部 CDN 地址 (默认不开启)
+  # asset_inject: false                            # 自动插入 Aplayer.js 与 Meting.js 资源脚本, 默认开启
+
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
@@ -102,4 +117,6 @@ theme: fluid
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:YasudaSayoo/YasudaSayoo.github.io.git
+  branch: master
