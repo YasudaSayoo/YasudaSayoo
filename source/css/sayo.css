@@ -4,7 +4,7 @@
 
 @counter-style circled-decimal {
   system: fixed;
-  symbols: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩;
+  symbols: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳;
   suffix: " ";
 }
 
@@ -15,7 +15,25 @@
   suffix: ") ";
 }
 
+/* 解釈 */
+.kakusu {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+}
+.kakusu > p {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  text-indent: 2rem;
+}
+.kakusu:hover p,
+.kakusu > p:hover {
+  opacity: 1;
+}
 /* 共通仕様 */
+
 .note {
   font-weight: bold;
 }
@@ -45,6 +63,32 @@
   padding-left: 10px;
 }
 
+/* 言葉 kotoba-left */
+.kotoba-left + ul {
+  padding-left: 0;
+  border: 1px solid #000;
+}
+.kotoba-left + ul > li {
+  display: flex;
+  margin-top: 0;
+  /* padding: 5px 10px; */
+}
+.kotoba-left + ul > li:nth-child(n + 2) {
+  border-top: 1px solid #000;
+}
+.kotoba-left + ul > li > span {
+  /* flex: 1 1 auto; */
+  width: 100%;
+  padding: 15px 0 0 10px;
+  min-width: 70px;
+  max-width: 100px;
+  border-right: 1px dashed #000;
+}
+.kotoba-left + ul > li > ul {
+  list-style: circled-decimal;
+  padding: 5px 0 5px 2rem;
+}
+
 /* 言葉と例文ー２言葉 */
 .kotoba-header + ul {
   margin-left: -10px;
@@ -71,47 +115,68 @@
    youhou01: 注意出错的地方
 */
 
-.rengo + ul > li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin-left: 1.5rem;
-}
-.rengo + ul > li:nth-child(4n+1) {
+.rengo3 + ul > li:nth-child(3n + 1) {
   counter-increment: count-rengo;
   position: relative;
 }
-.rengo + ul > li:nth-child(4n+1)::before {
-  content: "("counter(count-rengo)")";
+.rengo3 + ul > li:nth-child(3n + 1)::before {
+  content: "(" counter(count-rengo) ")";
   position: absolute;
   left: -1.7rem;
 }
-.rengo + ul > li > .rg-after {
-  min-width: 100px;
+.rengo4 + ul > li:nth-child(4n + 1) {
+  counter-increment: count-rengo;
   position: relative;
-  margin-right: 80px;
+}
+.rengo4 + ul > li:nth-child(4n + 1)::before {
+  content: "(" counter(count-rengo) ")";
+  position: absolute;
+  left: -1.7rem;
+}
+.rengo5 + ul > li:nth-child(5n + 1) {
+  counter-increment: count-rengo;
+  position: relative;
+}
+.rengo5 + ul > li:nth-child(5n + 1)::before {
+  content: "(" counter(count-rengo) ")";
+  position: absolute;
+  left: -1.7rem;
+}
+
+.rengo + ul > li {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.rengo + ul > li > .rg-after {
+  position: relative;
   display: flex;
   align-items: center;
 }
 .rengo + ul > li > .rg-after::after {
   content: "・";
   position: absolute;
-  right: 0;
+  right: -2rem;
 }
 
 .rengo + ul > li > .rg-before {
   position: relative;
   display: flex;
+  margin-left: auto;
   align-items: center;
 }
 .rengo + ul > li > .rg-before::before {
   content: "・";
   position: absolute;
-  left: -20px;
+  left: -2rem;
 }
 
 .youhou01 + ul,
-.imi + ul {
+.imi + ul,
+.imi2 + ul {
   margin-left: 2rem;
   list-style: quote-decimal outside;
 }
@@ -120,13 +185,25 @@
   min-width: 38%;
   display: inline-block;
   text-align: center;
-  padding: 5px 1rem;
+  padding: 20px 1rem 5px 1rem;
   border: 1px solid #000;
 }
 /* 問題仕様 */
 .option-border + ul {
   padding-left: 0;
   list-style: circled-decimal inside;
+}
+
+.imi2 + ul > li > ul {
+  list-style: none;
+  /* margin-left: 2rem; */
+}
+.imi2 + ul > li > ul > li {
+  counter-increment: count-imi2;
+  display: flex;
+}
+.imi2 + ul > li > ul > li > ul {
+  list-style: lower-alpha;
 }
 
 /* 用法仕様 */

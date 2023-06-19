@@ -47,8 +47,8 @@ hexo.extend.tag.register("youhouans3", youhouAns3Tag);
 
 const kotobaTag = (args) => {
   const classes = args[0] || "default";
-  const text = args[1];
-  return `<span class='kotoba kotoba-${classes}'>${text}</span>`;
+  const text = args[1] || '';
+  return `<span class='kotoba kotoba-${classes}'><strong>${text}</strong></span>`;
 };
 
 hexo.extend.tag.register("kotoba", kotobaTag);
@@ -65,7 +65,30 @@ hexo.extend.tag.register("oborder", optionBorderTag);
 const rengoTag = (args) => {
   const index = args[0];
   const text = (args[1] || '').split("　");
+  const empty = (args[2] || 0)
+
+  console.log('empty is ', empty);
+  if (+empty) return '';
+
   return `<span class='rg-after ${+index ? 'rg-index' : ''}'>${text[0]}</span><span class='rg-before'>${text[1]}</span>`
 }
 
 hexo.extend.tag.register("rengo", rengoTag);
+
+const seqTag = (args) => {
+  const SEQ_STRING = '例①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳';
+  const index = args[0] || 0;
+  return `<strong>${SEQ_STRING[index]}</strong>`
+}
+hexo.extend.tag.register("seq", seqTag);
+
+const kaisyakuTag = (args, content) => {
+  // const text = args.join()
+  console.log('text is ', content);
+  // engine : markdown/swig
+  return `<div class='kakusu'>
+            <span>答え：</span>
+            <p>${hexo.render.renderSync({ text: content, engine: "swig" })}</p>
+          </div>`
+} 
+hexo.extend.tag.register("kaisyaku", kaisyakuTag, { ends: true });
