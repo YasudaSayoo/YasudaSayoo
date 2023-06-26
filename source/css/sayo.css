@@ -127,7 +127,7 @@
   background-color: lightgrey; 
 }
 .rengo-und-ans:hover {
-  color: #000;
+  color: #f00;
   background-color: transparent;
 }
 
@@ -140,6 +140,7 @@
 }
 .rengo2 + ul > li > ul > li {
   display: flex;
+  flex-flow: row wrap;
 }
 .rengo2 + ul > li > ul > li > strong {
   margin-right: .5rem;
@@ -155,7 +156,7 @@
   font-size: medium;
 }
 .rengo2 + ul > li > ul > li > .ans-default:hover {
-  color: #000;
+  /* color: #000; */
   font-size: medium;
 }
 
@@ -212,7 +213,7 @@
 .rengo + ul > li > .rg-after::after {
   content: "・";
   position: absolute;
-  right: -2rem;
+  right: -1rem;
 }
 
 .rengo + ul > li > .rg-before {
@@ -224,7 +225,7 @@
 .rengo + ul > li > .rg-before::before {
   content: "・";
   position: absolute;
-  left: -2rem;
+  left: -1rem;
 }
 
 .youhou01 + ul,
