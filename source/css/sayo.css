@@ -22,7 +22,7 @@
   border: 1px solid #000;
   border-radius: 0.5rem;
 }
-.kakusu > ul {
+.kakusu > ul, .kakusu > p {
   /* padding: 0;
   margin: 0; */
   opacity: 0;
@@ -30,6 +30,11 @@
   list-style: decimal;
   /* text-indent: 2rem; */
 }
+.kakusu > p {
+  text-indent: 2rem;
+}
+.kakusu:hover p,
+.kakusu > p:hover,
 .kakusu:hover ul,
 .kakusu > ul:hover {
   opacity: 1;
