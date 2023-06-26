@@ -88,3 +88,12 @@ const kaisyakuTag = (args, content) => {
           </div>`
 } 
 hexo.extend.tag.register("kaisyaku", kaisyakuTag, { ends: true });
+
+const rengoUndTag = (args) => {
+  const reibun = args[0];
+  const kotae = args[1];
+  return `<span class="rengo-und${+reibun ? "" : "-ans"}">
+            <strong>&nbsp;${kotae}&nbsp;</strong>
+          </span>`;
+};
+hexo.extend.tag.register("rengound", rengoUndTag, { ends: false });

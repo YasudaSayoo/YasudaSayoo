@@ -117,6 +117,43 @@
    youhou01: 注意出错的地方
 */
 
+.rengo-und-ans {
+  color: transparent;
+  background-color: lightgrey; 
+}
+.rengo-und-ans:hover {
+  color: #000;
+  background-color: transparent;
+}
+
+.rengo2 + ul {
+  list-style: quote-decimal;
+  margin-left: 2rem;
+}
+.rengo2 + ul > li > ul {
+  list-style: none;
+}
+.rengo2 + ul > li > ul > li {
+  display: flex;
+}
+.rengo2 + ul > li > ul > li > strong {
+  margin-right: .5rem;
+}
+.rengo2 + ul > li > ul > li > .rengo-und-ans,
+.rengo2 + ul > li > ul > li > .rengo-und {
+  min-width: 40%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+.rengo2 + ul > li > ul > li > .ans-default {
+  /* color: #; */
+  font-size: medium;
+}
+.rengo2 + ul > li > ul > li > .ans-default:hover {
+  color: #000;
+  font-size: medium;
+}
+
 .rengo3 + ul > li:nth-child(3n + 1) {
   counter-increment: count-rengo;
   position: relative;
