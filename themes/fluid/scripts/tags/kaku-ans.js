@@ -67,7 +67,6 @@ const rengoTag = (args) => {
   const text = (args[1] || '').split("　");
   const empty = (args[2] || 0)
 
-  console.log('empty is ', empty);
   if (+empty) return '';
 
   return `<span class='rg-after ${+index ? 'rg-index' : ''}'>${text[0]}</span><span class='rg-before'>${text[1]}</span>`
@@ -83,12 +82,9 @@ const seqTag = (args) => {
 hexo.extend.tag.register("seq", seqTag);
 
 const kaisyakuTag = (args, content) => {
-  // const text = args.join()
-  console.log('text is ', content);
-  // engine : markdown/swig
   return `<div class='kakusu'>
             <span>答え：</span>
-            <p>${hexo.render.renderSync({ text: content, engine: "swig" })}</p>
+            <p>${hexo.render.renderSync({ text: content, engine: "markdown" })}</p>
           </div>`
 } 
 hexo.extend.tag.register("kaisyaku", kaisyakuTag, { ends: true });
