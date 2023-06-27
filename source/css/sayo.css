@@ -106,7 +106,7 @@
 }
 .kotoba-header + ul > li {
   list-style: circled-decimal inside;
-  margin-left: 10px;
+  padding: 0 10px 0 10px;
   /* display: flex; */
 }
 .kotoba-header + ul > li::marker {
