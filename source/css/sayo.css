@@ -259,7 +259,7 @@
   min-width: 38%;
   display: inline-block;
   text-align: center;
-  padding: 20px 1rem 5px 1rem;
+  padding: 1rem 1rem 0px 1rem;
   border: 1px solid #000;
 }
 /* 問題仕様 */
@@ -460,4 +460,53 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+
+
+/* 実力養成編 */
+/* １ー　語形成 例文 */
+.kotoba-gokeisei + ul, .kotoba-reibun + ul {
+  list-style: quote-decimal;
+}
+
+#導入練習 + * + p {
+  text-indent: 2rem;
+}
+
+.ans-text {
+  font-size: 1rem;
+}
+
+
+.rui + ul > li,
+.gokeisei + ul > li {
+  display: flex;
+  flex-flow: row wrap;
+  counter-increment: quote-count;
+}
+.rui + ul > li::before,
+.gokeisei + ul > li::before {
+  content: "("counter(quote-count)")　";
+}
+.gokeisei + ul > li > ul,
+.rui + ul > li > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.gokeisei + ul > li > ul:hover .op-ans,
+.rui + ul > li > ul:hover .op-ans {
+  border: 1px solid #f00;
+  border-radius: 50%;
+  padding: 2px
+}
+.gokeisei + ul > li > ul > li,
+.rui + ul > li > ul > li {
+  margin: 0;
+}
+.gokeisei + ul > li > ul > li:nth-child(n+2),
+.rui + ul > li > ul > li:nth-child(n+2) {
+  margin-left: 1rem;
 }

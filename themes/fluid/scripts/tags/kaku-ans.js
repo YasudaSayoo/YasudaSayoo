@@ -1,5 +1,29 @@
 "use strict";
 
+const textTag = (args) => {
+  const text = args[0];
+  return `<span class="ans ans-text">${text}</span>`;
+  // ${hexo.render.renderSync({ text, engine: "swig" })}
+};
+hexo.extend.tag.register("text", textTag);
+
+const maruOptionsTag = (args) => {
+  const ans = args[0] || 1
+  const options = args[1].split('　')
+  // console.log('options', options);
+  let li_str = ''
+  options.forEach((o, i) => {
+    if (i === (+ans - 1))
+      li_str += `<li class='op-ans'>${o}</li>`
+    else
+      li_str += `<li>${o}</li>`
+  })
+  
+  return `（　<ul>${li_str}</ul>　）`;
+}
+hexo.extend.tag.register("maruoption", maruOptionsTag);
+
+
 const kakuAns = (args) => {
   args = args.join(" ").split("@");
   const classes = args[0] || "default";
