@@ -116,11 +116,31 @@
   list-style: none;
 }
 
+#言葉 + ul > li > ul {
+  padding: 7px 0;
+}
+
 /* 基本練習ー１用法
    youhou01: 注意词语在使用时的一些限制
    youhou02: 注意用法
    youhou01: 注意出错的地方
 */
+
+.youhou03 + ul {
+  list-style: none;
+}
+.youhou03 + ul > li:first-child:before {
+  content: "(例)  ";
+}
+.youhou03 + ul > li:nth-child(n+2) {
+  counter-increment: youhou;
+}
+
+.youhou03 + ul > li:nth-child(n+2)::before {
+  content: "(" counter(youhou) ")　";
+  /* border: none;
+  width: 30px; */
+}
 
 .rengo-und-ans {
   color: transparent;
