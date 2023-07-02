@@ -2,6 +2,12 @@
   color: #ff1f2f !important;
 }
 
+@counter-style sankaku {
+  system: cyclic;;
+  symbols: ▶︎;
+  suffix: " ";
+}
+
 @counter-style circled-decimal {
   system: fixed;
   symbols: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳;
