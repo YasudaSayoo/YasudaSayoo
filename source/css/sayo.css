@@ -476,8 +476,10 @@
   list-style: quote-decimal;
 }
 
+#導入練習 + * + article > p,
 #導入練習 + * + p {
   text-indent: 2rem;
+  margin: 0;
 }
 
 .ans-text {
