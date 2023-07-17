@@ -1,9 +1,21 @@
+/* ruby */
+ruby {
+  display: block; /* 设置ruby元素为块级元素 */
+}
+
+rt {
+  /* 设置rt元素为块级元素 */
+  /* display: block;  */
+  /* 调整rt元素的上边距，避免重叠 */
+  margin-top: .5em; 
+}
+
 .aplayer .aplayer-lrc p {
   color: #ff1f2f !important;
 }
 
 @counter-style sankaku {
-  system: cyclic;;
+  system: cyclic;
   symbols: ▶︎;
   suffix: " ";
 }
@@ -28,7 +40,8 @@
   border: 1px solid #000;
   border-radius: 0.5rem;
 }
-.kakusu > ul, .kakusu > p {
+.kakusu > ul,
+.kakusu > p {
   /* padding: 0;
   margin: 0; */
   opacity: 0;
@@ -138,11 +151,11 @@
 .youhou03 + ul > li:first-child:before {
   content: "(例)  ";
 }
-.youhou03 + ul > li:nth-child(n+2) {
+.youhou03 + ul > li:nth-child(n + 2) {
   counter-increment: youhou;
 }
 
-.youhou03 + ul > li:nth-child(n+2)::before {
+.youhou03 + ul > li:nth-child(n + 2)::before {
   content: "(" counter(youhou) ")　";
   /* border: none;
   width: 30px; */
@@ -150,7 +163,7 @@
 
 .rengo-und-ans {
   color: transparent;
-  background-color: lightgrey; 
+  background-color: lightgrey;
 }
 .rengo-und-ans:hover {
   color: #f00;
@@ -169,7 +182,7 @@
   flex-flow: row wrap;
 }
 .rengo2 + ul > li > ul > li > strong {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 .rengo2 + ul > li > ul > li > .rengo-und-ans,
 .rengo2 + ul > li > ul > li > .rengo-und {
@@ -468,11 +481,10 @@
   align-items: center;
 }
 
-
-
 /* 実力養成編 */
 /* １ー　語形成 例文 */
-.kotoba-gokeisei + ul, .kotoba-reibun + ul {
+.kotoba-gokeisei + ul,
+.kotoba-reibun + ul {
   list-style: quote-decimal;
 }
 
@@ -486,7 +498,6 @@
   font-size: 1rem;
 }
 
-
 .rui + ul > li,
 .gokeisei + ul > li {
   display: flex;
@@ -495,7 +506,7 @@
 }
 .rui + ul > li::before,
 .gokeisei + ul > li::before {
-  content: "("counter(quote-count)")　";
+  content: "(" counter(quote-count) ")　";
 }
 .gokeisei + ul > li > ul,
 .rui + ul > li > ul {
@@ -508,13 +519,13 @@
 .rui + ul > li > ul:hover .op-ans {
   border: 1px solid #f00;
   border-radius: 50%;
-  padding: 2px
+  padding: 2px;
 }
 .gokeisei + ul > li > ul > li,
 .rui + ul > li > ul > li {
   margin: 0;
 }
-.gokeisei + ul > li > ul > li:nth-child(n+2),
-.rui + ul > li > ul > li:nth-child(n+2) {
+.gokeisei + ul > li > ul > li:nth-child(n + 2),
+.rui + ul > li > ul > li:nth-child(n + 2) {
   margin-left: 1rem;
 }
