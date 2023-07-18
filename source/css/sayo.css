@@ -1,3 +1,26 @@
+/* N2文法　begin */
+.note-bunhou + p {
+  text-indent: 2rem;
+}
+.note-bunhou + p + ul {
+  list-style: circled-decimal;
+}
+/* end */
+
+.note-bunhou-rensyuu + ul {
+  list-style: decimal inside;
+}
+.note-bunhou-rensyuu + ul > li > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.note-bunhou-rensyuu + ul > li > ul > li {
+  margin: 0;
+  list-style: lower-alpha inside;
+}
+
+
 /* ruby */
 ruby {
   display: block; /* 设置ruby元素为块级元素 */
