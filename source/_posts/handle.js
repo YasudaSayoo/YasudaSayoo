@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const filename = "日语会语4000句-7-1-就職活動.md";
-const data = fs.readFileSync("o-" + filename, { encoding: "utf-8" });
+const data = fs.readFileSync("../_drafts/o-" + filename, { encoding: "utf-8" });
 
 const han_reg = /\p{sc=Han}/gu;
 const hita_reg = /\p{sc=Hira}/gu;
