@@ -1,13 +1,13 @@
 const fs = require("fs");
 
-const filename = "日语会语4000句-7-1-就職活動.md";
+const filename = "日语会语4000句-5-4-交通機関.md";
 const data = fs.readFileSync("o-" + filename, { encoding: "utf-8" });
 
 const han_reg = /\p{sc=Han}/gu;
 const hita_reg = /\p{sc=Hira}/gu;
 const kana_reg = /\p{sc=Kana}/gu;
 const reg = /(\p{sc=Han}+々?)(\p{sc=Hira}+)/gu;
-const reg2 = /([\p{sc=Hira}\p{sc=Kana}\dー（）、。？！]+)(\p{sc=Han}+)/gu;
+const reg2 = /([\p{sc=Hira}\p{sc=Kana}\dー（）、。？！…a-zA-Z]+)(\p{sc=Han}+)/gu;
 const newFilename = `../_posts/${filename}`;
 
 if (fs.existsSync(newFilename)) {
