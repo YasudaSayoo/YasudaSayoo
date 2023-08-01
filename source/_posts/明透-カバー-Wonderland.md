@@ -1,7 +1,8 @@
 ---
 title: 明透_カバー_Wonderland
 date: 2023-07-02 21:32:05
-category: 音楽
+category:
+  [Vtuber, 明透]
 index_img: http://47.94.11.160:6208/ongaku/asu/Wonderland.jpeg
 banner_img: http://47.94.11.160:6208/ongaku/asu/Wonderland.jpeg
 tags:
