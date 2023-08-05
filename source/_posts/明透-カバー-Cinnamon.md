@@ -3,8 +3,8 @@ title: 明透-カバー-Cinnamon
 date: 2023-08-03 17:53:44
 category:
   [Vtuber, 明透]
-index_img: http://47.94.11.160:6208/ongaku/asu/Cinnamon.jpeg
-banner_img: http://47.94.11.160:6208/ongaku/asu/Cinnamon.jpeg
+index_img: /imgs/asu/Cinnamon.jpeg
+banner_img: /imgs/asu/Cinnamon.jpeg
 tags:
   - カバー
   - ASU

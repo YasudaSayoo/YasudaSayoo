@@ -3,8 +3,8 @@ title: 明透_カバー_LOOP
 date: 2023-07-12 21:32:05
 category:
   [Vtuber, 明透]
-index_img: http://47.94.11.160:6208/ongaku/asu/LOOP.jpeg
-banner_img: http://47.94.11.160:6208/ongaku/asu/LOOP.jpeg
+index_img: /imgs/asu/LOOP.jpeg
+banner_img: /imgs/asu/LOOP.jpeg
 tags:
   - カバー
   - ASU

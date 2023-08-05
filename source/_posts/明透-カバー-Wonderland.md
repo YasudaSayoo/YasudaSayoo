@@ -3,8 +3,8 @@ title: 明透_カバー_Wonderland
 date: 2023-07-02 21:32:05
 category:
   [Vtuber, 明透]
-index_img: http://47.94.11.160:6208/ongaku/asu/Wonderland.jpeg
-banner_img: http://47.94.11.160:6208/ongaku/asu/Wonderland.jpeg
+index_img: /imgs/asu/Wonderland.jpeg
+banner_img: /imgs/asu/Wonderland.jpeg
 tags:
   - カバー
   - ASU
