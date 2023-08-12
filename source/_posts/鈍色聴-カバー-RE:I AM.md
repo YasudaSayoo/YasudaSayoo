@@ -16,7 +16,7 @@ tags:
 
 > 令和5年8月13日、ゆるしーちゃんはユーチューブで投稿した
 
-{% youtube JIzx_aztGL4 %}
+{% youtube zn7V-dm4BHg %}
 
 Please hear me
 I want to tell you
