@@ -14,7 +14,7 @@ tags:
 
 # [RE:I AM](https://www.youtube.com/watch?v=jtRJ0zt8cnw)
 
-> 令和5年8月13日、ゆるしーちゃんはユーチューブで投稿した
+> 令和5年7月29日、ゆるしーちゃんはライブ配信で歌っていた
 
 {% youtube zn7V-dm4BHg %}
 
