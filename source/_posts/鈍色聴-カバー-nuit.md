@@ -1,10 +1,10 @@
 ---
 title: 鈍色聴-カバー-nuit
-date: 2023-08-14 21:39:42
+date: 2023-07-30 19:36:00
 category:
   [Vtuber, 鈍色聴]
-index_img: /imgs/yurushi/default.jpeg
-banner_img: /imgs/yurushi/default.jpeg
+index_img: /imgs/yurushi/karaoke.jpeg
+banner_img: /imgs/yurushi/karaoke.jpeg
 tags:
   - カバー
   - 鈍色聴
