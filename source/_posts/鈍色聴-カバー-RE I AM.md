@@ -1,10 +1,10 @@
 ---
 title: 鈍色聴-カバー-RE:I AM
-date: 2023-08-13 00:09:18
+date: 2023-07-29 20:49:00
 category:
   [Vtuber, 鈍色聴]
-index_img: /imgs/yurushi/default.jpeg
-banner_img: /imgs/yurushi/default.jpeg
+index_img: /imgs/yurushi/karaoke.jpeg
+banner_img: /imgs/yurushi/karaoke.jpeg
 tags:
   - カバー
   - 鈍色聴
