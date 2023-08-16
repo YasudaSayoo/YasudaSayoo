@@ -14,7 +14,7 @@ tags:
 
 # [nuit](https://www.youtube.com/watch?v=XckMDhr7a0E&t=0s)
 
-> 令和5年8月14日、ゆるしーちゃんはユーチューブで投稿した
+> 令和5年7月30日、ゆるしーちゃんはライブ配信で歌っていた
 
 {% youtube RHeqcoDdrsk %}
 
