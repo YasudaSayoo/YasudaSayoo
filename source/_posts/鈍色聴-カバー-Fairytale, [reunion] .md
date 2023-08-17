@@ -1,6 +1,6 @@
 ---
 title: 鈍色聴-カバー-Fairytale, [reunion]
-date: 2023-08-09 20:37:00
+date: 2023-08-06 20:37:00
 category:
   [Vtuber, 鈍色聴]
 index_img: /imgs/yurushi/karaoke2.jpeg
@@ -14,7 +14,7 @@ tags:
 
 # [Fairytale, [reunion]](https://www.youtube.com/watch?v=IW6sjlMp2o0)
 
-> 令和5年8月9日、ゆるしーちゃんはライブ配信で歌っていた
+> 令和5年8月6日、ゆるしーちゃんはライブ配信で歌っていた
 
 {% youtube nX8DOM8D41s %}
 
