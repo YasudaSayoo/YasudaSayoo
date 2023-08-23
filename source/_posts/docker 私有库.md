@@ -1,3 +1,11 @@
+---
+title: 搭建Docker私有库
+date: 2023-08-20 14:53:21
+category:
+  - [ Docker ]
+tags:
+  - registry
+---
 
 
 # 搭建Docker私有库
@@ -52,7 +60,7 @@ lixun@aliecs:~$ cat /etc/docker/daemon.jso
 }
 ```
 
-# push 到私服库
+## push 到私服库
 
 ```bash
 lixun@aliecs:~$ docker push 47.94.11.160:6210/sayo_ubuntu:1.01
